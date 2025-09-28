@@ -2,14 +2,33 @@ site_name: Vue Interview Roadmap
 site_description: Study notes and interview preparation roadmap for Vue.js.
 site_url: https://baraamashaal.github.io/interviews-roadmap/
 repo_url: https://github.com/baraamashaal/interviews-roadmap
-repo_name: interviews-roadmap
+repo_name: baraamashaal/interviews-roadmap
+edit_uri: edit/main/docs/
+site_author: Bara'a Mashaal
+copyright: "© {year} Bara'a Mashaal"
+
 theme:
   name: material
+  language: en
   features:
     - navigation.instant
     - navigation.tracking
+    - navigation.tabs
     - navigation.top
     - content.code.copy
+    - toc.integrate
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: teal
+      accent: orange
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: teal
+      accent: orange
+  icon:
+    repo: fontawesome/brands/github
+
 markdown_extensions:
   - admonition
   - meta
@@ -19,6 +38,19 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.tabbed:
+      alternate_style: true
+
+plugins:
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/baraamashaal
+      name: Bara'a Mashaal on GitHub
+
 nav:
   - Home: index.md
   - Vue Interview Roadmap:
