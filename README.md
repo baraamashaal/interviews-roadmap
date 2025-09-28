@@ -3,7 +3,6 @@
 This repository uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to build and publish the Vue interview
 roadmap and related study notes.
 
-
 ## Project structure
 
 ```
@@ -20,7 +19,6 @@ roadmap and related study notes.
 - All documentation content lives inside the `docs/` directory so MkDocs can resolve the navigation correctly.
 - Navigation, theme settings, and metadata are configured in `mkdocs.yml`.
 - GitHub Pages deployment is automated through `.github/workflows/deploy.yml`.
-
 
 ## Local development
 
