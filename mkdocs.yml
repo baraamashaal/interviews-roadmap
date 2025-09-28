@@ -1,0 +1,68 @@
+site_name: Vue Interview Roadmap
+site_description: Study notes and interview preparation roadmap for Vue.js.
+site_url: https://<username>.github.io/interviews-roadmap/
+repo_url: https://github.com/<username>/interviews-roadmap
+repo_name: interviews-roadmap
+theme:
+  name: material
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - content.code.copy
+markdown_extensions:
+  - admonition
+  - meta
+  - codehilite
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+nav:
+  - Home: index.md
+  - Vue Interview Roadmap:
+      - Overview: vue-interview-roadmap.md
+      - "\U0001F331 Basic Vue Questions":
+          - "1.1 Vue 2 vs Vue 3": vue-interview-roadmap/1.1-vue2-vs-vue3.md
+          - "1.2 Options API vs Composition API": vue-interview-roadmap/1.2-options-vs-composition-api.md
+          - "1.3 Lifecycle hooks": vue-interview-roadmap/1.3-vue-lifecycle-hooks.md
+          - "1.4 Reactivity system": vue-interview-roadmap/1.4-vue-reactivity-system.md
+          - "1.5 v-if vs v-show": vue-interview-roadmap/1.5-v-if-vs-v-show.md
+          - "2.1 Core directives": vue-interview-roadmap/2.1-core-directives.md
+          - "2.2 Single File Components": vue-interview-roadmap/2.2-single-file-components.md
+          - "3.1 Computed vs watch": vue-interview-roadmap/3.1-computed-vs-watch.md
+          - "3.2 Form handling": vue-interview-roadmap/3.2-form-handling.md
+      - "\U0001F33F Intermediate Vue Questions":
+          - "4.1 Vuex basics": vue-interview-roadmap/4.1-vuex-basics.md
+          - "4.2 Mixins vs Composition API": vue-interview-roadmap/4.2-mixins-vs-composition.md
+          - "4.3 Vuex vs Redux": vue-interview-roadmap/4.3-vuex-vs-redux.md
+          - "4.4 Reactivity caveats": vue-interview-roadmap/4.4-reactivity-caveats.md
+          - "5.1 Navigation guards": vue-interview-roadmap/5.1-navigation-guards.md
+          - "5.2 Guard types": vue-interview-roadmap/5.2-guard-types.md
+          - "6.1 Async components": vue-interview-roadmap/6.1-async-components.md
+          - "6.2 Vue CLI basics": vue-interview-roadmap/6.2-vue-cli-basics.md
+          - "6.3 setup() function": vue-interview-roadmap/6.3-setup-function.md
+          - "6.4 Slots": vue-interview-roadmap/6.4-slots.md
+          - "6.5 Scoped CSS": vue-interview-roadmap/6.5-scoped-css.md
+          - "6.6 Teleport": vue-interview-roadmap/6.6-teleport.md
+          - "6.7 Provide/Inject": vue-interview-roadmap/6.7-provide-inject.md
+          - "6.8 Custom directives": vue-interview-roadmap/6.8-custom-directives.md
+          - "7.1 Error boundaries": vue-interview-roadmap/7.1-error-boundaries.md
+          - "7.2 Vue DevTools": vue-interview-roadmap/7.2-vue-devtools.md
+          - "7.3 Testing strategies": vue-interview-roadmap/7.3-testing-strategies.md
+          - "8.1 Transitions": vue-interview-roadmap/8.1-transitions.md
+      - "\U0001F333 Advanced Vue Questions":
+          - "9.1 Virtual DOM": vue-interview-roadmap/9.1-virtual-dom.md
+          - "9.2 Performance optimization": vue-interview-roadmap/9.2-performance-optimization.md
+          - "9.3 Memory leaks": vue-interview-roadmap/9.3-memory-leaks.md
+          - "10.1 Vue SSR & Nuxt": vue-interview-roadmap/10.1-vue-ssr-nuxt.md
+          - "10.2 Hydration": vue-interview-roadmap/10.2-hydration.md
+          - "10.3 SPA vs SSR vs SSG": vue-interview-roadmap/10.3-spa-ssr-ssg.md
+          - "10.4 Internationalization": vue-interview-roadmap/10.4-internationalization.md
+          - "11.1 Code splitting": vue-interview-roadmap/11.1-code-splitting.md
+          - "11.2 Composition API best practices": vue-interview-roadmap/11.2-composition-api-best-practices.md
+          - "11.3 TypeScript with Vue": vue-interview-roadmap/11.3-typescript-with-vue.md
+          - "11.4 Suspense & async setup": vue-interview-roadmap/11.4-suspense-async-setup.md
+          - "11.5 Concurrent rendering": vue-interview-roadmap/11.5-concurrent-rendering.md
+          - "11.6 Tree shaking": vue-interview-roadmap/11.6-tree-shaking.md
