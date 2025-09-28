@@ -1,5 +1,6 @@
 name: Build and deploy MkDocs Material site
 
+
 on:
   push:
     branches:
@@ -17,6 +18,7 @@ concurrency:
 
 jobs:
   build:
+
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
@@ -55,3 +57,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+

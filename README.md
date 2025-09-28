@@ -2,6 +2,7 @@
 
 This repository hosts my Vue interview roadmap and notes. The static site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published via GitHub Pages.
 
+
 ## Project structure
 
 ```
@@ -64,3 +65,4 @@ mkdocs build --strict
 ### Manual publishing
 
 If you prefer to publish the static files yourself, run `mkdocs build --strict` and upload the generated `site/` directory to any static hosting provider.
+
