@@ -47,3 +47,4 @@ The generated files will appear in the `site/` directory, ready to be published.
 1. Ensure GitHub Pages is set to deploy from the `gh-pages` branch (Settings → Pages → Build and deployment).
 2. Push to the `main` branch. The GitHub Actions workflow automatically builds the site with MkDocs Material and publishes it to the `gh-pages` branch using the repository's default `GITHUB_TOKEN`.
 3. Your site will be available at `https://<username>.github.io/interviews-roadmap/` after the workflow completes.
+
