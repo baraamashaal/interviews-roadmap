@@ -1,8 +1,49 @@
-# Vue Study Notes (GitHub Pages)
+# Vue Interview Roadmap (MkDocs Material)
 
-This repository hosts my Vue interview roadmap and notes.
-- Site home: `index.md`
-- Roadmap: `vue-interview-roadmap.md`
+This repository uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to build and publish the Vue interview
+roadmap and related study notes.
 
-## Local editing
-Just edit the Markdown files and push to GitHub.
+## Project structure
+
+```
+.
+├── docs/
+│   ├── index.md
+│   ├── vue-interview-roadmap.md
+│   └── vue-interview-roadmap/
+│       └── *.md
+├── mkdocs.yml
+└── .github/workflows/deploy.yml
+```
+
+- All documentation content lives inside the `docs/` directory so MkDocs can resolve the navigation correctly.
+- Navigation, theme settings, and metadata are configured in `mkdocs.yml`.
+- GitHub Pages deployment is automated through `.github/workflows/deploy.yml`.
+
+## Local development
+
+1. Install MkDocs Material:
+   ```bash
+   pip install mkdocs-material
+   ```
+2. Run the local development server:
+   ```bash
+   mkdocs serve
+   ```
+3. Open your browser at <http://127.0.0.1:8000> to preview the site.
+
+## Deployment
+
+### Manual build
+
+Build the static site output with:
+```bash
+mkdocs build
+```
+The generated files will appear in the `site/` directory, ready to be published.
+
+### GitHub Pages (recommended)
+
+1. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
+2. Push to the `main` branch. The GitHub Actions workflow builds the MkDocs Material site, uploads it as a Pages artifact, and deploys it with `actions/deploy-pages`.
+3. Your site will be available at `https://<username>.github.io/interviews-roadmap/` after the workflow completes.
