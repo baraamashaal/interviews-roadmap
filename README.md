@@ -1,6 +1,8 @@
 # Vue Interview Roadmap (MkDocs Material)
 
-This repository now uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to build and publish the Vue interview roadmap and related study notes.
+This repository uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to build and publish the Vue interview
+roadmap and related study notes.
+
 
 ## Project structure
 
@@ -8,12 +10,17 @@ This repository now uses [MkDocs Material](https://squidfunk.github.io/mkdocs-ma
 .
 ├── docs/
 │   ├── index.md
-│   └── vue-interview-roadmap.md
-└── mkdocs.yml
+│   ├── vue-interview-roadmap.md
+│   └── vue-interview-roadmap/
+│       └── *.md
+├── mkdocs.yml
+└── .github/workflows/deploy.yml
 ```
 
-- All content lives inside the `docs/` directory.
+- All documentation content lives inside the `docs/` directory so MkDocs can resolve the navigation correctly.
 - Navigation, theme settings, and metadata are configured in `mkdocs.yml`.
+- GitHub Pages deployment is automated through `.github/workflows/deploy.yml`.
+
 
 ## Local development
 
@@ -29,8 +36,17 @@ This repository now uses [MkDocs Material](https://squidfunk.github.io/mkdocs-ma
 
 ## Deployment
 
+### Manual build
+
 Build the static site output with:
 ```bash
 mkdocs build
 ```
-The generated files will appear in the `site/` directory, ready to be published (for example, via GitHub Pages).
+The generated files will appear in the `site/` directory, ready to be published.
+
+### GitHub Pages (recommended)
+
+1. Ensure GitHub Pages is set to deploy from the `gh-pages` branch (Settings → Pages → Build and deployment).
+2. Push to the `main` branch. The GitHub Actions workflow automatically builds the site with MkDocs Material and publishes it to the `gh-pages` branch using the repository's default `GITHUB_TOKEN`.
+3. Your site will be available at `https://<username>.github.io/interviews-roadmap/` after the workflow completes.
+
