@@ -1,7 +1,7 @@
-# Vue Interview Roadmap (MkDocs Material)
+# Vue Interview Roadmap
 
-This repository uses [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) to build and publish the Vue interview
-roadmap and related study notes.
+This repository hosts my Vue interview roadmap and notes. The static site is built with [MkDocs Material](https://squidfunk.github.io/mkdocs-material/) and published via GitHub Pages.
+
 
 ## Project structure
 
@@ -20,31 +20,49 @@ roadmap and related study notes.
 - Navigation, theme settings, and metadata are configured in `mkdocs.yml`.
 - GitHub Pages deployment is automated through `.github/workflows/deploy.yml`.
 
-## Local development
+## Content overview
 
-1. Install MkDocs Material:
-   ```bash
-   pip install mkdocs-material
-   ```
-2. Run the local development server:
-   ```bash
-   mkdocs serve
-   ```
-3. Open your browser at <http://127.0.0.1:8000> to preview the site.
+- Site home: `docs/index.md`
+- Roadmap overview: `docs/vue-interview-roadmap.md`
+- Detailed Q&A: `docs/vue-interview-roadmap/*.md`
+
+## Local editing
+
+Update any of the Markdown files under `docs/` and preview the result locally with MkDocs.
+
+### Prerequisites
+
+Install MkDocs Material (which bundles MkDocs itself) in your Python environment:
+
+```bash
+pip install mkdocs-material
+```
+
+### Live preview
+
+Serve the documentation locally and open <http://127.0.0.1:8000>:
+
+```bash
+mkdocs serve
+```
+
+### Static build
+
+Create the production-ready static files in the `site/` directory:
+
+```bash
+mkdocs build --strict
+```
 
 ## Deployment
 
-### Manual build
-
-Build the static site output with:
-```bash
-mkdocs build
-```
-The generated files will appear in the `site/` directory, ready to be published.
-
 ### GitHub Pages (recommended)
 
-1. Ensure GitHub Pages is set to deploy from the `gh-pages` branch (Settings → Pages → Build and deployment).
-2. Push to the `main` branch. The GitHub Actions workflow automatically builds the site with MkDocs Material and publishes it to the `gh-pages` branch using the repository's default `GITHUB_TOKEN`.
+1. In **Settings → Pages → Build and deployment**, choose **GitHub Actions**.
+2. Push to the `main` branch. The GitHub Actions workflow builds the MkDocs Material site, uploads it as a Pages artifact, and deploys it with `actions/deploy-pages`.
 3. Your site will be available at `https://<username>.github.io/interviews-roadmap/` after the workflow completes.
+
+### Manual publishing
+
+If you prefer to publish the static files yourself, run `mkdocs build --strict` and upload the generated `site/` directory to any static hosting provider.
 
